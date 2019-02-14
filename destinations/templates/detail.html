@@ -3,15 +3,43 @@
 {% block title %}Detail{% endblock title %} 
 
 {% block content %}
+<div class="container">
+    <br>
+  <div class="row">
+    <div class="col">
+     
+    </div>
+    <div class="col-8">
+        <div class="card" style="width: 60rem;">
+  <img src="{{destination.pretty_picture.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
     <p>{{destination.name}}</p>
     <p>{{destination.description}}</p>
     <p>{{destination.activities}}</p>
-    <p><img src="{{destination.pretty_picture.url}}"></p>
+   
+
     <p>{{destination.optimal_visiting_season}}</p>
     <a href="{% url 'destination-update' destination.id %}">
-        <button>Update</button>
+        <button >Update</button>
     </a>
     <a href="{% url 'destination-delete' destination.id %}">
         <button>Delete</button>
     </a>
+   
+  </div>
+</div>
+     
+    </div>
+    <div class="col">
+    
+    </div>
+  </div>
+
+
+
+
+
+
+
+    
 {% endblock content %}
